@@ -7,7 +7,23 @@ namespace ChallengeSets
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            int nextNumber = int.MaxValue;
+            //throw new NotImplementedException();
+            if(startNumber % n == 0)
+            {
+                startNumber = nextNumber;
+            }
+            for(int i = startNumber; i < nextNumber; i++)
+            { 
+               
+                if(i % n == 0)
+                {
+                   i = nextNumber;
+                    
+                   
+                }
+            }
+            return nextNumber;
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
