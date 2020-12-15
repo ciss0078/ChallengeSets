@@ -84,8 +84,8 @@ namespace ChallengeSets.Tests
             for (int i = 0; i < namesInOrder.Length; i++)
             {
                 current.Name = namesInOrder[i];
-                current.ParentCompany = i == namesInOrder.Length - 1 ? null : new Business();
-                current = current.ParentCompany;
+                current.SetParentCompany(i == namesInOrder.Length - 1 ? null : new Business());
+                current = current.GetParentCompany();
             }
 
             // Act
